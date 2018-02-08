@@ -28,7 +28,7 @@ and postconditions using the `@Ensures` annotation.
 
 If the user passes in a bad index.
 
-![alt text](img/add_both_contracts_precondition_violated_code.pnG "Alt text!")
+![alt text](img/add_both_contracts_precondition_violated_code.png "Alt text!")
 
 The precondition will be violated and Cofoja will print the following error.
 
