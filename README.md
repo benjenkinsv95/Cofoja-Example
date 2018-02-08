@@ -15,6 +15,8 @@ A postcondition is a statement that is true after a method is run.
 ### Invariants
 An invariant is a statement that is always true for an object. Invariants are run before and after each method call.
 
+
+### `List.add(int index, E element)` Example
 An example of  *Design by Contract* preconditions and postconditions is shown below.
 
 It is an implementation of a `List`'s `add(int index, E element)` method using Java's assert statements.
