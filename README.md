@@ -71,6 +71,6 @@ Contracts help determine if the implementor or user of a library caused an issue
 Cofoja uses the GPLv3 license, so you most likely won't be able to use it commercially.
 
 ### Lack of native language support
-[]The biggest languages with native support are Clojure and Perl6.](https://en.wikipedia.org/wiki/Design_by_contract#Language_support)
+[The biggest languages with native support are Clojure and Perl6.](https://en.wikipedia.org/wiki/Design_by_contract#Language_support)
  Though .NET *used to* have good support through Code Contracts.
 
