@@ -1,5 +1,9 @@
-# Cofoja
+# Cofoja Examples
 *A Design by Contract programming framework for Java.*
+
+## Presentation
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/OcKQTKiqQMk/0.jpg)](https://www.youtube.com/watch?v=OcKQTKiqQMk)
 
 ## What is Design by Contract?
 Design by contract allows a developer to define precise specifications for software components.
