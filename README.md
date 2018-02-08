@@ -18,8 +18,7 @@ after inserting it.
 ## What is Cofoja?
 Cofoja is a framework for specifying contracts in Java using annotations. 
 
-### Defining preconditions and postconditions in Cofoja
-
+### Defining preconditions & postconditions
 Using the same example as before, we can now specify preconditons using the `@Requires` annotation
 and postconditions using the `@Ensures` annotation.
 
@@ -47,6 +46,29 @@ But the postcondition is violated then Cofoja will print the following error.
 ![alt text](img/add_both_contracts_postcondition_violated.png "Alt text!")
 
 
+### Defining Invariants
+Cofoja also allows classes to define invariants. An invariant is a statement that is true
+after every method call.
+
+An example of an invariant would be how a Set must only contain unique elements. 
+
+To express that invariant in Cofoja, you would use the `Invariant` annotation.
+
+![alt text](img/invariantset_invariant.png "Alt text!")
+
+The methods are written like normal.
+
+![alt text](img/invariantset_add.png "Alt text!")
+
+When an Invariant is violated. 
+
+![alt text](img/invariantset_add_failed_test.png "Alt text!")
+
+An error is thrown.
+
+![alt text](img/invariantset_add_failed.png "Alt text!")
+
+
 ### What benefits does Cofoja provide over Java's built in assertions?
 Cofoja has two huge benefits over Java's assert statements
 * Application logic is separated from contract logic.
@@ -59,7 +81,7 @@ the contract in the code and the documentation separately. Which is error prone 
  is updated without the other.
 
 
-## What are the benefits of Design by Contract?
+## What are the benefits of Design by Contract in general?
 ### Defect localization
 When an error is raised, you know the method with the error. Which reduces debugging time.
 
@@ -67,10 +89,9 @@ When an error is raised, you know the method with the error. Which reduces debug
 Contracts help determine if the implementor or user of a library caused an issue.
 
 ## What are the downsides of Design by Contract?
-### Cofoja license
-Cofoja uses the GPLv3 license, so you most likely won't be able to use it commercially.
-
 ### Lack of native language support
 [The biggest languages with native support are Clojure and Perl6.](https://en.wikipedia.org/wiki/Design_by_contract#Language_support)
  Though .NET *used to* have good support through Code Contracts.
 
+### Cofoja license
+Cofoja uses the GPLv3 license, so you most likely won't be able to use it commercially.

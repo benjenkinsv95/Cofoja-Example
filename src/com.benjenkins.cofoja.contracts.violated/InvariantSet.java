@@ -15,16 +15,22 @@ import java.util.List;
 @Invariant("hasUniqueElements()")
 public class InvariantSet<E> {
 
-    private List<E> list = new ArrayList<>();
+    private List<E> elements = new ArrayList<>();
 
     public void add(E element) {
-        list.add(element);
+        elements.add(element);
     }
 
     // Used in the contract
+
+    /**
+     * @return true if all elements are unique
+     */
     private boolean hasUniqueElements() {
-        for (E element : list) {
-            if (list.indexOf(element) != list.lastIndexOf(element)) {
+        for (E element : elements) {
+            // The first occurrence should be the same as the last occurrence, if this isn't true,
+            // return false
+            if (elements.indexOf(element) != elements.lastIndexOf(element)) {
                 return false;
             }
         }
