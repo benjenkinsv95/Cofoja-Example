@@ -43,22 +43,22 @@ and postconditions using the `@Ensures` annotation.
 
 If the user passes in a bad index.
 
-![alt text](img/add_both_contracts_precondition_violated_code.png "Alt text!")
+![alt text](img/add_both_contracts_precondition_violated_code.png "The user passed in the index 2, when the list is empty.")
 
 The precondition will be violated and Cofoja will print the following error.
 
-![alt text](img/add_both_contracts_precondition_violated.png "Alt text!")
+![alt text](img/add_both_contracts_precondition_violated.png "An error message is printed telling the user the index should be <= size()")
 
 
 #### Violating a postcondition
 
 If the user passes in correct data.
 
-![alt text](img/add_both_contracts_postcondition_violated_code.png "Alt text!")
+![alt text](img/add_both_contracts_postcondition_violated_code.png "User inserts at the index 0.")
 
 But the postcondition is violated then Cofoja will print the following error.
 
-![alt text](img/add_both_contracts_postcondition_violated.png "Alt text!")
+![alt text](img/add_both_contracts_postcondition_violated.png "A postcondition error is thrown, showing that the element cannot be retrieved with get(index)")
 
 
 ### Defining Invariants
@@ -69,19 +69,19 @@ An example of an invariant would be how a Set must only contain unique elements.
 
 To express that invariant in Cofoja, you would use the `Invariant` annotation.
 
-![alt text](img/invariantset_invariant.png "Alt text!")
+![alt text](img/invariantset_invariant.png "An Invariant annotation is added that ensures unique elements are in the class.")
 
 The methods are written like normal.
 
-![alt text](img/invariantset_add.png "Alt text!")
+![alt text](img/invariantset_add.png "A normal add method without any annotations.")
 
 When an Invariant is violated. 
 
-![alt text](img/invariantset_add_failed_test.png "Alt text!")
+![alt text](img/invariantset_add_failed_test.png "Violating the invariant by adding multiple of the same element.")
 
 An error is thrown.
 
-![alt text](img/invariantset_add_failed.png "Alt text!")
+![alt text](img/invariantset_add_failed.png "An InvariantError explaining that elements must be unique is thrown.")
 
 
 ### What benefits does Cofoja provide over Java's built in assertions?
@@ -89,7 +89,7 @@ Cofoja has two huge benefits over Java's assert statements
 * Application logic is separated from contract logic.
 * The contract is included in the Javadoc. 
 
-![alt text](img/add_javadoc_generated.png "Alt text!")
+![alt text](img/add_javadoc_generated.png "A picture of the add() methods javadoc, showing the @Ensures and @Requires contracts.")
 
 If we were using Java's built in assert methods for contracts we would have to maintain
 the contract in the code and the documentation separately. Which is error prone if one 
