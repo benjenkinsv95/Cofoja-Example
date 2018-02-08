@@ -17,6 +17,12 @@ public class CombinedContractList<E> {
 
     private List<E> list = new ArrayList<>();
 
+    /**
+     * Inserts the element at the position, shifting any subsequent elements right.
+     *
+     * @param index   where the element will be inserted
+     * @param element any element
+     */
     @Requires({"index >= 0", "index <= size()"})
     @Ensures({"element.equals(get(index))"})
     public void add(int index, E element) {
@@ -29,7 +35,7 @@ public class CombinedContractList<E> {
     }
 
     public E get(int index) {
-        return list.get(index);
+        return index < list.size() ? list.get(index) : null;
     }
 
     private boolean hasUniqueElements() {

@@ -14,11 +14,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CombinedContractListTest {
 
+
     @Test
-    @DisplayName("add with precondition and postcondition checks.")
-    public void add() {
+    @DisplayName("add should fail since violating precondition.")
+    public void add1() {
         CombinedContractList<String> contractList = new CombinedContractList<>();
         contractList.add(2, "cat");
+    }
+
+    @Test
+    @DisplayName("add should fail postcondition since logic isnt implemented")
+    public void add2() {
+        CombinedContractList<String> contractList = new CombinedContractList<>();
+        contractList.add(0, "cat");
     }
 
 
